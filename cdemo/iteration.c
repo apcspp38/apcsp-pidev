@@ -5,7 +5,7 @@ int main()
 
 	int div = 10;
 	int i;
-	printf ("Numbers divisible by 10:\n");
+	printf ("Numbers divisible by %d:\n",div);
 	for ( i = 1; i <= 100; i++ )
 
 	{
