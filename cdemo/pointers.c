@@ -17,21 +17,23 @@ int main()
   printf("It stores the value %d\n", *ptrtoa);
   printf("The address of a is %d\n", &a);
 
-  float d = 2;
-  float e = 3;
-  printf("The value of d is %d and its address is %d/n", d, &d);
-  printf("The value of d is %d and its address is %d/n", e, &e);
+  float d;
+  d = 2.5;
+  float e = 3.6;
+  printf("The value of d is %f and its address is %d\n", d, &d);
+  printf("The value of e is %f and its address is %d\n", e, &e);
 
-  int* ptrtod;
+  float* ptrtod;
   ptrtod = &d;
-  int* ptrtoe;
+  float* ptrtoe;
   ptrtoe = &e;
 
   ptrtoe = &d;
   ptrtod = &e;
 
-  e = *ptrtoe;
-  d = *ptrtod;
+  float temp = *ptrtod;
+  *ptrtod = *ptrtoe;
+  *ptrtoe = temp;
 
-  printf("New d = %d; New e = %d/n",d, e);
+  printf("New d = %f; New e = %f\n",d, e);
 }
