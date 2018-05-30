@@ -26,5 +26,13 @@ int main()
   {
     printf("a is not 0\n");
   }
+  else if ("a == 0 && b ==0")
+  {
+    printf("a and b are equal to 0\n");
+  }
+  else if ("a == 0 || b == 0")
+  {
+    printf("neither a nor b are equal to 0\n");
+  }
  
 }
