@@ -1,0 +1,25 @@
+#include <stdio.h>
+struct Student {
+	char firstname[50];
+	char lastname[50];
+	int age;
+	int studentid;
+};
+
+void printStudent(struct Student* student)
+{
+	char fullname[100];
+	strcpy(fullname, firstname);
+	strcat(fullname, " ");
+	strcat(fullname, lastname);
+	printf("Student Name: %s\n", fullname);
+};
+
+int main()
+{
+	struct Student student1;
+
+	strcpy(student1.firstname, "firstname");
+	strcpy(student1.lastname, "lastname");
+	printstudent(student1);
+};
