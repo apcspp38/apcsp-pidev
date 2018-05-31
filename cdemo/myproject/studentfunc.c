@@ -2,6 +2,13 @@
 #include "studentfunc.h"
 #include <string.h>
 
+struct Student {
+        char firstname[50];
+        char lastname[50];
+        int age;
+        int studentid;
+};
+
 void printStudent(struct Student* student)
 {
         char fullname[100];
