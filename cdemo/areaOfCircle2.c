@@ -17,23 +17,33 @@ float main()
 
    printf("What is the lower value?\n");
    fgets(input, 256, stdin);
-   sscanf(input, "%f", &lower);
-   if (isdigit(lower))
- {
-    printf("%f is your minimum value\n", lower);
- }
-   else
- {
-    printf("You did not enter a number. Enter a number\n");
+   while(sscanf(input, "%f", &lower) != 1)
+   {
+    printf("Not a number. Try again\n", lower);
     fgets(input, 256, stdin);
     sscanf(input, "%f", &lower);
+    if(sscanf(input, "%f", &lower) != 0)
+     {
+      printf("%f is your minimum value\n", lower);
+      break;
+     }
    
- }
+    }
 
    printf("What is the upper value?\n");
    fgets(input, 256, stdin);
+   while(sscanf(input, "%f", &upper) != 1)
+   {
+   printf("Not a number. Try again\n");
+   fgets(input, 256, stdin);
    sscanf(input, "%f", &upper);
-   printf("%f is your maximum value\n", upper);
+   if(sscanf(input, "%f", &upper) != 0)
+    {
+      printf("%f is your maximum value\n", upper);
+      break;
+    }
+   }
+
 
    float a = lower;
    float b = upper;
