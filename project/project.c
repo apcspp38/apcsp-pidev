@@ -3,9 +3,9 @@
 
 void encrypt(int key, char sample[])
 {
-	
 	for (int i = 0; i < strlen(sample); i++)
-    {
+    {   
+        
         if (sample[i]>='a' && sample[i] <= 'z')
         {    
             if (((sample[i] + key) % 26) >= 19)
@@ -45,4 +45,4 @@ int main(int argc, char* argv[])
     arg++;
   }
    
-}
+} 
