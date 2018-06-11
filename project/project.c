@@ -6,8 +6,7 @@ void encrypt(int key, char sample[])
 	
 	for (int i = 0; i < strlen(sample); i++)
         {
-            
-        if ((sample[i] + key) < 104)
+         if (((sample[i] + key) % 26) >= 19)
         {
             sample[i] = (sample[i] + key) % 26 + 78;
         }
@@ -16,6 +15,7 @@ void encrypt(int key, char sample[])
            sample[i] = ((sample[i] + key) % 26 + 104);
         }
         
+            
         }
     printf("%s", sample);
    
@@ -27,7 +27,7 @@ int main(int argc, char* argv[])
    int arg = 1;
    while (arg < argc)
   {
-    encrypt(1, argv[arg]);
+    encrypt(10, argv[arg]);
     arg++;
   }
    
